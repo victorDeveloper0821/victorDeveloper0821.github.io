@@ -1,5 +1,4 @@
 baseURL = 'http://example.org/'
-languageCode = 'zh-tw'
 ## 網站的 title 
 title = 'Victor 的技術天地'
 author='Victor'
