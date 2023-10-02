@@ -78,4 +78,3 @@ defaultContentLanguage='zh'
       weight = 400
       identifier = "about"
       url = "/en/about/"
->>>>>>> f37b421 (設定 i18n 及 menu)
