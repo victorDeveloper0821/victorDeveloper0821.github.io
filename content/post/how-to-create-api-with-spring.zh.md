@@ -1,5 +1,5 @@
 ---
-title: "API 服務使用 Spring Boot"
+title: "使用 Spring Boot框架創建基本 Restful API"
 date: 2023-10-27T17:23:42+08:00
 Description: "Tutorial on intermediate concepts on Spring boot"
 Tags: ["Spring", "Backend"]
