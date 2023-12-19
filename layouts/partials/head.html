@@ -202,6 +202,9 @@
     {{- partial "analytics/umami" . -}}
   {{ end }}
 
+  {{- if and (hugo.IsProduction) (.context.Site.Params.gtagId) -}}
+    {{ partial "google-analytics-gtag-async.html" .context }}
+  {{- end -}}
 
   <!-- Twitter Cards -->
   {{ template "_internal/twitter_cards.html" . }}
