@@ -16,7 +16,7 @@ defaultContentLanguage='zh'
   filename = "sitemap.xml"
 [params]
   profilePicture='images/gravator.jpg'
-
+  gtagId="G-N03L7B2R6D"
   [[main]]
   name = "Home"
   identifier = "home"
