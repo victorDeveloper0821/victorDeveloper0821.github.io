@@ -202,7 +202,7 @@
     {{- partial "analytics/umami" . -}}
   {{ end }}
 
-  {{- if and (hugo.IsProduction) (.context.Site.Params.gtagId) -}}
+  {{- if and (hugo.IsProduction) (.Site.Params.gtagId) -}}
     {{ partial "google-analytics-gtag-async.html" .context }}
   {{- end -}}
 
