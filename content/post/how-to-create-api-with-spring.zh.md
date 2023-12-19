@@ -6,23 +6,26 @@ Tags: ["Spring", "Backend"]
 Categories: ["technical"]
 DisableComments: false
 ---
+## API 伺服器：
+API 是一個提供使用者端(手機APP、網頁)與伺服器端的溝通橋樑，可以取用端點 (endpoints) 並依照其所需的參數，取得使用者的資料。
 
-## API Server: 
-API is an interface which provide frontend or other user with expected data with some parameters. 
+## 在設計 API 服務之前：
+在建立 API 之前，以下我們首先需要去考慮的重點。
+- 明確定義狀態碼或狀態消息
+- 為 API 服務新增安全性保護
+- 即時的 API 文件 (e.g. Swagger)
+- 處理不同情境的錯誤，例如：商業邏輯、使用者登入時效逾期、系統內部錯誤、API 介接錯誤
 
-## Before we design an API service: 
-To build up an API, we consider some factors first. 
+在接下來的教程中，我將提及一些有關 API 設計的重要問題，並以 Spring Boot 為例。
 
-- well-define status codes or status messages
-- Secure your api service 
-- Proper API documents
-- Error handling with different scenerios
+## 什麼是 Spring Boot？
+Spring Boot 是一個用於創建獨立、產品級基於 Spring 的應用程序的開源基於 Java 的框架。它通過在設定檔中自動配置(autoConfiguration)，提供Spring設置的默認值，簡化了構建和部署 Java 應用程序的過程。
 
-In the following tutorial, I will mention some important issues on API Design and use spring boot as a example. 
-
-## What is spring boot? 
-Spring Boot is an open-source Java-based framework used to create standalone, production-grade Spring-based applications. It simplifies the process of building and deploying Java applications by providing a set of conventions and defaults for application setup.
+## 我可以如何建立 spring boot 程式?
+在 [Spring Initializr](https://start.spring.io/) 可以將 Spring boot 快速建立。
+**目前Spring boot 中最新的版本為3.2.0 版，且最低需求為 Java 17 版**
 
 ---
-## Example code here: 
-[Spring boot template](https://github.com/victorlikecode/Spring-boot-template)
+### 範例程式碼:
+此程式碼持續更新中  
+[Spring boot 3 template](https://github.com/victorlikecode/Spring-boot-template)
