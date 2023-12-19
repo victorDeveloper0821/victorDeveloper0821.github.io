@@ -1,7 +1,7 @@
 ---
 title: "關於我"
 date: 2023-10-02T23:44:31+08:00
-draft: true
+draft: false
 ---
 ## Intro: 
 大家好，我是 Victor 

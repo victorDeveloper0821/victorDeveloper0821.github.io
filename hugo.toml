@@ -81,7 +81,7 @@ defaultContentLanguage='zh'
     weight = 1    
     [languages.zh.params]
       Title='蔡仔為 Victor'
-      description='一位 Java工程師'
+      description='在軟體業打滾中的 Java 工程師，在冰冷的 code 中記錄生活的溫暖'
      [[languages.zh.menu.main]]
       name="首頁"
       url = "/"
@@ -111,7 +111,7 @@ defaultContentLanguage='zh'
     weight = 2     
     [languages.en.params]       
       Title = 'Victor Tsai'
-      description = 'testing description'
+      description = 'Interest: Java, Backend Engineering'
     [[languages.en.menu.main]]
       name="Home"
       url = "/en/"
