@@ -203,7 +203,7 @@
   {{ end }}
 
   {{- if and (hugo.IsProduction) (.Site.Params.gtagId) -}}
-    {{ partial "google-analytics-gtag-async.html" .context }}
+    {{- partial "google-analytics-gtag-async.html" . -}}
   {{- end -}}
 
   <!-- Twitter Cards -->
