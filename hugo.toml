@@ -4,7 +4,7 @@ title = 'Victor 的技術天地'
 author='Victor'
 isMultiLingual=true
 isTranslated=true
-
+googleAnalytics="G-N03L7B2R6D"
 ## SEO descirption 
 description='這邊是Victor 的技術天地，在這裡我會分享軟體工程師工作的點滴'
 theme = 'anatole'
