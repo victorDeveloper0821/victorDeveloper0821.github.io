@@ -54,7 +54,7 @@ spring:
 
 You can also use `@Value("${spring.profiles.active}")` to inject a single configuration value.
 
-## Determining Which Bean to Activate Based on Configuration Values - @Conditional
+## Determining Which Bean to Activate Based on Configuration Values - @ConditionalOnProperty
 
 `@ConditionalOnProperty` is a Spring annotation used to determine whether a specific bean should be activated during application startup.
 
