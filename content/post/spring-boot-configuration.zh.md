@@ -9,23 +9,112 @@ draft: true
 ---
 
 ## 什麼時候需要用到設定檔?
-你可能會碰到以下狀況
-- 本地端 or 公司 VM 的資料庫設定跟產品正式環境的不一樣
-- 當你要在內部測試介接 API 時，我無法實際取用 API 網址，需要用設定檔決定要如何顯示 API 資料
-- 一個 API server 給多個客戶，且客戶在同功能中的商業需求都不一樣，我應該如何活用設定檔？
-- 有很多自定義的設定檔，但是想將自定義的設定集中在一個類別設定
+在使用 Spring Boot 框架時，設定檔的需求常常出現在以下情境：
 
-## 於程式啟動時，設定哪一個 properties:
-可以使用 spring.profiles.active 這個設定的鍵值，如此可以達到依據環境不同切換設定檔的方式
+1. 本地端或公司 VM 的資料庫設定與正式環境的不同。
+2. 在內部測試介接 API 時，需要動態調整 API 網址的顯示。
+3. 一個 API server 服務多個客戶，而每個客戶在相同功能中的商業需求各不相同，需要透過設定檔來區分。
+4. 管理多個自定義的設定檔，希望將其集中在一個類別中。
 
-於 application.properties 設定下述，可以啟用 application-local.properties (當然如果設定是用 YAML 也適用)
-properties
-```
+## 程式啟動時設定 Properties
+
+透過 `spring.profiles.active` 屬性，可以根據環境不同切換設定檔。可以在 `application.properties` 中進行配置：
+
+**使用 properties 格式:**
+```properties
 spring.profiles.active=local
 ```
-yaml
-```=yaml
-spring: 
-  profiles: 
+
+**使用 YAML 格式:**
+```yaml
+spring:
+  profiles:
     active: local
 ```
+
+或者，也可以透過 JVM 啟動參數指定：
+
+```bash
+java -jar your-application.jar -DAPI_ENV=xxxxx
+```
+
+然後在程式中引用：
+```properties
+spring.profiles.active=${API_ENV}
+```
+
+或者在 YAML 中：
+```yaml
+spring:
+  profiles:
+    active: ${API_ENV}
+```
+
+也可以使用 `@Value("${spring.profiles.active}")` 進行單一設定值的注入。
+
+## 根據設定值決定啟動哪一個 Bean - @Conditional
+
+`@ConditionalOnProperty` 是 Spring 中用來決定應用啟動時是否啟動某個 Bean 的條件注解。
+
+以一個介面 A 為例，有兩個實作類別 B 和 C，我們可以透過 `@Conditional` 的設定，根據 `mock.enable` 屬性的值來決定實際使用哪個實作：
+
+```java
+interface A {
+
+}
+
+@ConditionalOnProperty(name="mock.enable", havingValue = "true", matchIfMissing = false)
+@Service
+class B implements A {
+
+}
+
+@ConditionalOnProperty(name="mock.enable", havingValue = "false")
+@Service
+class C implements A {
+
+}
+```
+
+這樣，當 `mock.enable` 為 `true` 時，Bean B 會被建立；當 `mock.enable` 為 `false` 時，或者未設定 `mock.enable` 時，Bean C 會被建立。
+
+## 整理自定義的設定檔 - @ConfigurationProperties
+
+當有多個自定義的 properties 需要管理時，可以使用 `@ConfigurationProperties` 進行整理，將相關設定集中在一個類別中：
+
+```java
+@ConfigurationProperties(prefix = "myapp")
+public class MyAppProperties {
+
+    private String a;
+    private String b;
+
+    // Getter and Setter methods
+}
+```
+
+然後在 `application.properties` 中進行配置：
+
+```properties
+myapp.a=valueA
+myapp.b=valueB
+```
+
+然後在 Spring Boot 應用程式中注入 `MyAppProperties`：
+
+```java
+@Service
+public class MyService {
+
+    private final MyAppProperties myAppProperties;
+
+    @Autowired
+    public MyService(MyAppProperties myAppProperties) {
+        this.myAppProperties = myAppProperties;
+    }
+
+    // 使用 myAppProperties 中的設定值
+}
+```
+
+這樣可以更清晰地管理和使用多個自定義的設定檔。
