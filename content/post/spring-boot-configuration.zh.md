@@ -52,31 +52,31 @@ spring:
 
 也可以使用 `@Value("${spring.profiles.active}")` 進行單一設定值的注入。
 
-## 根據設定值決定啟動哪一個 Bean - @Conditional
+## 根據設定值決定啟動哪一個 Bean - @ConditionalOnProperty
 
 `@ConditionalOnProperty` 是 Spring 中用來決定應用啟動時是否啟動某個 Bean 的條件注解。
 
-以一個介面 A 為例，有兩個實作類別 B 和 C，我們可以透過 `@Conditional` 的設定，根據 `mock.enable` 屬性的值來決定實際使用哪個實作：
+以一個介面 CustomerAPIService 為例，此介面需用於介接外部 API 或是其他微服務，並且有兩個實作類別 MockCustomerAPIServiceImpl (模擬API資料) 和 CustomerAPIServiceImpl (介接真實 API) ，我們可以透過 `@ConditionalOnProperty` 的設定，根據 `mock.enable` 屬性的值來決定實際使用哪個實作：
 
 ```java
-interface A {
+interface CustomerAPIService {
 
 }
 
 @ConditionalOnProperty(name="mock.enable", havingValue = "true", matchIfMissing = false)
 @Service
-class B implements A {
+class MockCustomerAPIServiceImpl implements CustomerAPIService {
 
 }
 
 @ConditionalOnProperty(name="mock.enable", havingValue = "false")
 @Service
-class C implements A {
+class CustomerAPIServiceImpl implements CustomerAPIService {
 
 }
 ```
 
-這樣，當 `mock.enable` 為 `true` 時，Bean B 會被建立；當 `mock.enable` 為 `false` 時，或者未設定 `mock.enable` 時，Bean C 會被建立。
+這樣，當 `mock.enable` 為 `true` 時，MockCustomerAPIServiceImpl 的 Bean 會被建立；當 `mock.enable` 為 `false` 時，或者未設定 `mock.enable` 時，Bean CustomerAPIServiceImpl 的 Bean 會被建立。
 
 ## 整理自定義的設定檔 - @ConfigurationProperties
 

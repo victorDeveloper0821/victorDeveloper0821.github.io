@@ -58,22 +58,22 @@ You can also use `@Value("${spring.profiles.active}")` to inject a single config
 
 `@ConditionalOnProperty` is a Spring annotation used to determine whether a specific bean should be activated during application startup.
 
-Consider an interface A with two implementing classes, B and C. By using `@Conditional`, you can dynamically select the implementation based on the value of the `mock.enable` property:
+Consider an interface CustomerAPIService which served as connecting with microservice or real world api. After that, there are two implementing classes, MockCustomerAPIServiceImpl and CustomerAPIServiceImpl. By using `@ConditionalOnProperty`, you can dynamically select the implementation based on the value of the `mock.enable` property:
 
 ```java
-interface A {
+interface CustomerAPIService {
 
 }
 
 @ConditionalOnProperty(name="mock.enable", havingValue = "true", matchIfMissing = false)
 @Service
-class B implements A {
+class MockCustomerAPIServiceImpl implements CustomerAPIService {
 
 }
 
 @ConditionalOnProperty(name="mock.enable", havingValue = "false")
 @Service
-class C implements A {
+class CustomerAPIServiceImpl implements CustomerAPIService {
 
 }
 ```
