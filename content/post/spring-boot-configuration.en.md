@@ -5,7 +5,7 @@ Description: ""
 Tags: []
 Categories: []
 DisableComments: false
-draft: true
+draft: false
 ---
 ## When Do You Need Configuration Files?
 
@@ -120,3 +120,8 @@ public class MyService {
 ```
 
 This approach provides a clearer way to manage and use multiple custom configuration files.
+
+### references
+- [@ConditionalOnProperty 介紹](https://medium.com/@erayaraz10/conditional-configuration-in-spring-boot-with-conditionalonproperty-207a5104c8bd)
+- [@ConfigurationProperties 介紹](https://www.baeldung.com/configuration-properties-in-spring-boot)
+- [@ConfigurationProperties 設定方式](https://spring.hhui.top/spring-blog/2021/01/17/210117-SpringBoot%E7%B3%BB%E5%88%97ConfigurationProperties%E9%85%8D%E7%BD%AE%E7%BB%91%E5%AE%9A%E4%B8%AD%E9%82%A3%E4%BA%9B%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84%E4%BA%8B%E6%83%85/)
