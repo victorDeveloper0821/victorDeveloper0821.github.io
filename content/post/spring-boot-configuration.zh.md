@@ -21,12 +21,12 @@ draft: false
 透過 `spring.profiles.active` 屬性，可以根據環境不同切換設定檔。可以在 `application.properties` 中進行配置：
 
 **使用 properties 格式:**
-```properties
+```
 spring.profiles.active=local
 ```
 
 **使用 YAML 格式:**
-```yaml
+```
 spring:
   profiles:
     active: local
@@ -58,7 +58,7 @@ spring:
 
 以一個介面 CustomerAPIService 為例，此介面需用於介接外部 API 或是其他微服務，並且有兩個實作類別 MockCustomerAPIServiceImpl (模擬API資料) 和 CustomerAPIServiceImpl (介接真實 API) ，我們可以透過 `@ConditionalOnProperty` 的設定，根據 `mock.enable` 屬性的值來決定實際使用哪個實作：
 
-```java
+```
 interface CustomerAPIService {
 
 }
@@ -82,7 +82,7 @@ class CustomerAPIServiceImpl implements CustomerAPIService {
 
 當有多個自定義的 properties 需要管理時，可以使用 `@ConfigurationProperties` 進行整理，將相關設定集中在一個類別中：
 
-```java
+```
 @ConfigurationProperties(prefix = "myapp")
 public class MyAppProperties {
 
@@ -95,14 +95,14 @@ public class MyAppProperties {
 
 然後在 `application.properties` 中進行配置：
 
-```properties
+```
 myapp.a=valueA
 myapp.b=valueB
 ```
 
 然後在 Spring Boot 應用程式中注入 `MyAppProperties`：
 
-```java
+```
 @Service
 public class MyService {
 
