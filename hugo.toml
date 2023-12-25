@@ -2,6 +2,7 @@ baseURL = 'https://victorDeveloper0821.github.io/'
 ## 網站的 title 
 title = 'Victor 的技術天地'
 author='Victor'
+enableEmoji=true
 isMultiLingual=true
 isTranslated=true
 googleAnalytics="G-N03L7B2R6D"
