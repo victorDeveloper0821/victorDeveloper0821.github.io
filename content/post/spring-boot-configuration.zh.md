@@ -34,17 +34,17 @@ spring:
 
 或者，也可以透過 JVM 啟動參數指定：
 
-```bash
+```
 java -jar your-application.jar -DAPI_ENV=xxxxx
 ```
 
 然後在程式中引用：
-```properties
+```
 spring.profiles.active=${API_ENV}
 ```
 
 或者在 YAML 中：
-```yaml
+```
 spring:
   profiles:
     active: ${API_ENV}
