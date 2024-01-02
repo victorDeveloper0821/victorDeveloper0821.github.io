@@ -1,9 +1,9 @@
 ---
-title: "Spring Boot 程式設定教學"
+title: "Spring Boot 程式設定檔教學 - 在不同運行環境配置的技巧"
 date: 2023-12-19T10:41:16+08:00
-Description: "教你快速設定 Spring boot程式"
-Tags: ['spring', 'backend']
-Categories: ['technical']
+Description: "教你在不同運行環境下快速使用 application.properties，設定 @Bean 初始化的方法，並使用@ConfigurationProperties 的方式，設定 Spring boot 程式"
+Tags: ['spring boot', '設定檔', '環境設定']
+Categories: ['technical', 'spring boot', '後端']
 DisableComments: false
 draft: false
 ---
