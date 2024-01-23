@@ -5,7 +5,7 @@ Description: "以 spring boot 3 為範例，教學如何使用 Swagger 設定 AP
 Tags: ['spring boot','API Doc', 'Swagger']
 Categories: ['spring boot', 'backend']
 DisableComments: false
-draft: true
+draft: false
 ---
 
 ## 為什麼要用到 API 文檔？
@@ -20,7 +20,7 @@ draft: true
 ---
 經過 3 年工作的觀察，原因為 hackmd 與 word 都需要在程式更新後，再去 hackmd 或是 word手動更新 api 規格
 
-以工程師的懶惰至上絕對無法接受，在社會上面對 deadline 你需要更好的工具藉由每次程式改動後即時更新 api 文檔 - Swagger 就是多種後端框架的主流解法
+以工程師的懶惰至上絕對無法接受，在社會上面對 deadline 你需要更好的工具藉由每次程式改動後即時更新 api 文檔 - Swagger 就是多種後端框架的主流解法，當中有多種程式語言實作，例如: C#, Golang, Python, PHP。
 
 ## 如何在 spring boot 使用 swagger? 
 
@@ -62,7 +62,7 @@ P.S. Spring 社群也提供 openapi 2 換 openapi 3 的方法
 ### 地雷2: spring boot 部署於 nginx 做反向代理時 server url 錯誤
 可以使用以下步驟檢查：
 1. 檢查 nginx 設定是否包含 `proxy_set_heaser` 的 Host, Proto 是否有設定
-2. application.properties 設定 `server.forward-headers-strategy` 改為 native or framework。 
+2. **application.properties** 設定 `server.forward-headers-strategy` 改為 native or framework。 
 3. 使用空白spring boot專案測試 springdoc openapi 是否正常使用 
 
 [springfox to springdoc](https://blog.idontwannarock.me/2022/12/springfox_to_springdoc/)
