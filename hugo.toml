@@ -19,6 +19,7 @@ defaultContentLanguage='zh'
   favicon = 'favicons/'
   profilePicture='images/gravator.jpg'
   gtagId="G-N03L7B2R6D"
+  hotjarId = "3836599"
   [[main]]
   name = "Home"
   identifier = "home"
