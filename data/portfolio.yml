@@ -2,20 +2,19 @@ portfolioitems:
   # portfolio category
   - title: Coding Projects
     portfolioitem:
-      - name: Project 1
-        image: '/images/portfolio/code.jpg'
-        link: https://gohugo.io/
-        linktext: 'Visit project website'
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+      - name: Spring boot templates
+        image: '/images/portfolio/springboot.png'
+        link: https://github.com/victorDeveloper0821/Spring-boot-template
+        linktext: 'View more on templates'
+        description: 'create a templates based on spring boot 3'
         tags:
-          - Tag 1
-          - Tag 2
-        status: 'Finished'
-        start: '2020'
-        end: '2021'
+          - Backend
+          - Java
+        status: 'onGoing'
+        start: '2023'
+        end: ''
         authors:
-          - lxndrblz
-          - alexanderdavide
+          - Victor
       - name: Project 2
         image: '/images/portfolio/code.jpg'
         link: https://gohugo.io/
