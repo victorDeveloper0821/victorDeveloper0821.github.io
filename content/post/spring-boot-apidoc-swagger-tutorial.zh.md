@@ -57,12 +57,13 @@ P.S. Spring 社群也提供 openapi 2 換 openapi 3 的方法
 可以使用以下步驟檢查：
 1. 檢查 Spring Security是否有依照 swagger 的 url 進行開放通行 (permitAll() 權限) 
 2. 如果 Spring Security 有設定 OncePerRequestFilter 的話，則需要覆寫 `shouldNotFilter(HttpServletRequest request)` 的函數
-3. 使用空白spring boot專案測試 springdoc openapi 是否正常使用 
+3. 使用空白spring boot專案進行交叉測試 springdoc openapi 是否正常使用 
 
 ### 地雷2: spring boot 部署於 nginx 做反向代理時 server url 錯誤
 可以使用以下步驟檢查：
 1. 檢查 nginx 設定是否包含 `proxy_set_heaser` 的 Host, Proto 是否有設定
 2. **application.properties** 設定 `server.forward-headers-strategy` 改為 native or framework。 
-3. 使用空白spring boot專案測試 springdoc openapi 是否正常使用 
 
-[springfox to springdoc](https://blog.idontwannarock.me/2022/12/springfox_to_springdoc/)
+### 資料來源：
+- [springfox to springdoc](https://blog.idontwannarock.me/2022/12/springfox_to_springdoc/)
+- [Springdoc 官方網站](https://springdoc.org/migrating-from-springfox.html)

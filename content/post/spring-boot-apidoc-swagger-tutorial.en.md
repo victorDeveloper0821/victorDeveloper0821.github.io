@@ -5,21 +5,19 @@ Description: "quick guide on spring boot 3. How to create an api document with s
 Tags: ['spring boot','API Doc', 'Swagger']
 Categories: ['spring boot', 'backend']
 DisableComments: false
-draft: true
+draft: false
 ---
 ## Why Use API Documentation?
 
 ---
-In the industry, work is not as perfect as in general software engineering theory; often, you need to play the role of an archaeologist to explore the wisdom of predecessors.
-
-In the field of web development, from the past when engineers needed to handle both front-end and back-end work, to the present where the roles are distinct, there is a need for a unified tool that allows both front-end and back-end to be familiar with API specifications.
+When software development teams develop RESTful APIs, they would like to reduce communication costs as much as they can. Speaking of API design, both frontend and backend engineers will access or test the functions of the APIs; therefore, maintaining documentation is absolutely important. In the documentation, we always include information such as URL, request body, response body, and headers. Swagger saves your day because it helps you generate documentation after source code changes.
 
 ## Why Not Just Use HackMD or Word for Updates?
 
 ---
 After three years of observation in the field, the reason is that both HackMD and Word require manual updates of API specifications after program updates.
 
-With the laziness of engineers being paramount, it is absolutely unacceptable. In society, facing deadlines, you need a better tool to update API documentation immediately after each program change. Swagger is the mainstream solution for various back-end frameworks, with implementations in various programming languages such as C#, Golang, Python, and PHP.
+As a software engineer, my creativity comes from being a lazy person. Sometimes facing deadlines, you need a better tool to update API documentation immediately after each source codes changes. Swagger is a popular solution for various back-end frameworks, with implementations in various programming languages such as C#, Golang, Python, and PHP.
 
 ## How to Use Swagger in Spring Boot?
 
@@ -60,6 +58,7 @@ You can check with the following steps:
 You can check with the following steps:
 1. Check if the nginx configuration includes `proxy_set_heaser` with Host and Proto settings.
 2. In **application.properties**, set `server.forward-headers-strategy` to native or framework.
-3. Test if springdoc openapi works normally with a blank spring boot project.
 
-[Springfox to Springdoc](https://blog.idontwannarock.me/2022/12/springfox_to_springdoc/)
+### Useful Resources: 
+- [Migrations from springfox to springdoc](https://blog.idontwannarock.me/2022/12/springfox_to_springdoc/)
+- [Springdoc official website](https://springdoc.org/migrating-from-springfox.html)
