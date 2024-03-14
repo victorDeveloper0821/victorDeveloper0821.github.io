@@ -16,6 +16,7 @@ defaultContentLanguage='zh'
   priority = 0.5
   filename = "sitemap.xml"
 [params]
+  customCss = ["css/custom.css"]
   favicon = 'favicons/'
   profilePicture='images/gravator.jpg'
   gtagId="G-N03L7B2R6D"

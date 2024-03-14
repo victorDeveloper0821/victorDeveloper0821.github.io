@@ -1,0 +1,28 @@
+/* 設定表格的基本樣式 */
+table {
+    width: 100%;
+    border-collapse: collapse; /* 折叠邊框，讓相鄰的邊框只顯示一條線 */
+  }
+  
+  /* 設定表格內所有的 td 和 th 標籤的邊框樣式 */
+  th, td {
+    border: 1px solid black; /* 每個單元格都設定邊框 */
+    text-align: center; /* 文字置中 */
+    padding: 8px; /* 內距，使文字與邊框之間有些距離，看起來不那麼擁擠 */
+  }
+  
+  /* 設定表頭（th）的樣式 */
+  thead th {
+    background-color: #0099CC; /* 深藍色背景 */
+    color: white; /* 白色文字 */
+  }
+  
+  /* 設定表格行的背景色交替顯示深淺藍色 */
+  tr:nth-child(odd) {
+    background-color: #B3D1FF; /* 較淺的藍色，奇數行使用 */
+  }
+  
+  tr:nth-child(even) {
+    background-color: #99B3E6; /* 較深的藍色，偶數行使用 */
+  }
+  
