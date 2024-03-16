@@ -15,7 +15,7 @@ Before discussing the optimization of Docker image files, let's briefly introduc
 The popularity of Docker stems from its ability to standardize the running versions of applications. The pain point it aims to solve is that the project environment can run smoothly on any computer, in any environment, with just a few commands, without the need for complicated preliminary work.。
 
 ## 3 things you need to know in Docker：
-- Register: A space for storing Docker image files, similar to services like GitHub, for example: DockerHub, Google Container Registry.
+- Registry: A space for storing Docker image files, similar to services like GitHub, for example: DockerHub, Google Container Registry.
 - Image: A read-only environment that defines the settings required for running an application; this environment can be defined through a Dockerfile.
 - Container: An executable process generated from the definition of an Image.
 
@@ -32,15 +32,14 @@ Here is also the [official guideline](https://docs.docker.com/develop/develop-im
 
 ## 以下為優化前後的映像檔比較表格:
 
-| ##  | 映像檔大小  | 基底映像檔大小 | 啟動時間 |
-|---|---|---|---|
-| 使用 JDK 為運行環境  | 457 MB  | 210.63 MB  | 待測 | 
-| 使用 JRE 為運行環境  | 176 MB  | 120 MB  | 待測 |
+| ##  | total Size  | Base Image Size |
+|---|---|---|
+| JDK   | 457 MB  | 210.63 MB  |
+| JRE   | 176 MB  | 120 MB  | 
 
 From the table above, we can summarize the following information:
 
 The image size using JDK is larger than that using JRE because JDK includes developer tools. Therefore, for production environments, JRE should be the primary base.
-The startup time data is pending testing.
 
 ## 資料來源: 
 - [虛擬機器與容器差異](https://ithelp.ithome.com.tw/articles/10238498)
