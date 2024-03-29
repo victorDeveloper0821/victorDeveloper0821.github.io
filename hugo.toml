@@ -15,12 +15,28 @@ defaultContentLanguage='zh'
   changefreq = "monthly"
   priority = 0.5
   filename = "sitemap.xml"
+[taxonomies]
+  category = 'categories'
+  series = 'series'
+  tag = 'tags'
 [params]
   customCss = ["css/custom.css"]
   favicon = 'favicons/'
   profilePicture='images/gravator.jpg'
   gtagId="G-N03L7B2R6D"
   hotjarId = "3836599"
+  relatedPosts=true
+  numberOfRelatedPosts=3
+
+[[related.indices]]
+    applyFilter = false
+    cardinalityThreshold = 0
+    name = 'tags'
+    pattern = ''
+    toLower = true
+    type = 'basic'
+    weight = 80
+
   [[main]]
   name = "Home"
   identifier = "home"

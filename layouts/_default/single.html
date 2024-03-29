@@ -54,7 +54,8 @@
         {{- partial "series.html" . -}}
       {{- end -}}
 
-      {{- if (eq .Site.Params.relatedPosts true) -}}
+      <!-- if relatedPosts is true in markdown related.html is shown-->
+      {{- if (eq .Params.relatedPosts true) -}}
         {{- partial "related.html" . -}}
       {{- end -}}
 
