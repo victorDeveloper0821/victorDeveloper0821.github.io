@@ -20,6 +20,7 @@ defaultContentLanguage='zh'
   series = 'series'
   tag = 'tags'
 [params]
+  enableMediumZoom=false
   customCss = ["css/custom.css"]
   favicon = 'favicons/'
   profilePicture='images/gravator.jpg'

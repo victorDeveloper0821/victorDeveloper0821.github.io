@@ -26,4 +26,21 @@ table {
     background-color: #d9d9d9; /* 較深的藍色，偶數行使用 */
     border-bottom: 1px dashed rgb(66, 65, 65); /* 每個單元格都設定邊框 */
   }
+
+  .page_404{
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .page_404 a{
+/*    font-family: 'Open Sans', sans-serif;*/
+    background-color: #24a0ed;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+  }
+
+  .page_404 a span{
+    margin-right: 10px;
+  }
+
   
