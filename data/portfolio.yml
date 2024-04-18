@@ -15,6 +15,13 @@ portfolioitems:
         end: ''
         authors:
           - Victor
+      - name: Cloud function crawler
+        link: https://github.com/victorDeveloper0821/crawler-cloud-function
+        status: 'On Going'
+        description: 'Combine with google schedular to fetch opendata regularly'
+        tags:
+          - GCP
+          - Python
       - name: Sharing Bike Prediction
         image: '/images/portfolio/bikePred.png'
         link: https://gohugo.io/
@@ -23,13 +30,6 @@ portfolioitems:
         tags:
           - Data Analytics
           - Machine Learning
-      - name: Project 3
-        link: https://gohugo.io/
-        status: 'Finished'
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-        tags:
-          - Tag 1
-          - Tag 2
   # portfolio category
   - title: Research
     portfolioitem:
