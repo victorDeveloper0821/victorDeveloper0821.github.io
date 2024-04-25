@@ -50,13 +50,18 @@ conda install -c conda-forge jupyter-book jupyter
 ```
 
 ## 建立 Jupyter notebook 方法：
+**Jupyter notebook 是什麼？**
+- 可互動式網頁介面，可以直接在筆記本上執行、編寫 Python 程式碼
+- 由 IPython(互動式 Python 片段執行) + Notebook 整合形成
+
+以下開始敘述如何建立這樣的專案：
 
 1. 直接從以前的 Jupyter notebook 專案新增檔案
 
-需要新增下列檔案：
-- A configuration file (`_config.yml`)
-- A table of contents file (`_toc.yml`)
-
+**需要新增下列檔案：**
+- 基本的 jupyter notebook 設定資訊 (`_config.yml`)
+- 設定 table of Content 於 jupyter notebook (`_toc.yml`)
+---
 2. 利用 Jupyter book 指令建立新專案
 安裝完環境後可以使用 `jupyter-book` 指令建立 template 
 ```
@@ -121,5 +126,8 @@ chapters:
 - 註冊帳戶(建議使用 github 建立)
 - 與 github 中要部署的專案連結，連結後會有 Authorization 視窗，直接點選“是”即可
 - 於部署設定要設定 `build command` 與 `Publish directory` 的選項，這樣網頁才能部署成功。
-![Netlify設定](images/netlify-jpyter.png)
+![Netlify設定](/images/netlify-jpyter.png)
 **官網中更詳細的設定[點這邊](https://jupyterbook.org/en/stable/publish/netlify.html)**
+
+## 資料來源：
+ - [Jupyter book 官網](https://jupyterbook.org/en/stable/intro.html)
