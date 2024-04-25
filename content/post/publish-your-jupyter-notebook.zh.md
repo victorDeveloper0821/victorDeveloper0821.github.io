@@ -24,7 +24,7 @@ DisableComments: false
 
 ## 如何開始建立 Jupyter Notebook 專案?
 
-**Prequests: **
+**Prequests:**
 - 安裝 Anaconda 或是 mini-conda (aka. 縮小版 Anaconda)，在指令列可以用 `conda` 指令 
 
 打開命令列輸入以下指令，安裝 Jupyter notebook 及相關套件於環境:
@@ -52,4 +52,74 @@ conda install -c conda-forge jupyter-book jupyter
 ## 建立 Jupyter notebook 方法：
 
 1. 直接從以前的 Jupyter notebook 專案新增檔案
+
+需要新增下列檔案：
+- A configuration file (`_config.yml`)
+- A table of contents file (`_toc.yml`)
+
 2. 利用 Jupyter book 指令建立新專案
+安裝完環境後可以使用 `jupyter-book` 指令建立 template 
+```
+jupyter-book create your_folder/
+```
+
+### 建立 jupyter notebook 專案後，其資料夾架構如下：
+P.S. 可直接使用 tree 指令查看樹狀架構
+```
+$ tree your_folder
+your_folder/
+├── _config.yml
+├── _toc.yml
+├── intro.md
+├── logo.png
+├── markdown-notebooks.md
+├── markdown.md
+├── notebooks.ipynb
+├── references.bib
+└── requirements.txt
+```
+其中要包含 requirements.txt 以利於部署程式時安裝其相依套件
+
+### _config.yml 簡易設定：
+```
+# In _config.yml
+title: My sample book
+author: The Jupyter Book Community
+logo: logo.png
+execute:
+  execute_notebooks: force
+
+# Add a bibtex file so that we can create citations
+bibtex_bibfiles:
+  - references.bib
+```
+**三個主要的設定**
+- title: 你的 Jupyter notebook 標題 (可自訂)
+- author: 作者名稱(可自訂)
+- logo: 你的圖片 logo 名稱
+**詳細可以參考[這邊](https://jupyterbook.org/en/stable/customize/config.html)**
+
+### _toc.yml 簡易設定:
+```
+# In _toc.yml
+format: jb-book
+root: intro
+chapters:
+- file: markdown
+- file: notebooks
+- file: markdown-notebooks
+```
+**主要設定檔**
+- format: 顯示 jupyterbook 的樣式(`jb-article`, or `jb-book`)
+- root: 你的 jupyter notebook 首頁
+- chapters: 該章節可以在 yml 新增多個檔名，每個檔名代表一個 chapter (章節)
+
+## 發布你的 Jupyter Notebook 到網頁上：
+目前官方網站建議使用 netlify 作為部署的主要 solution，這個 Section 中介紹概略的流程如何部署完成
+
+**相關步驟如下：**
+- 註冊帳戶(建議使用 github 建立)
+- 與 github 中要部署的專案連結，連結後會有 Authorization 視窗，直接點選“是”即可
+- 於部署設定要設定 `build command` 與 `Publish directory` 的選項，這樣網頁才能部署成功。
+![Netlify設定](images/netlify-jpyter.png)
+**官網中更詳細的設定[點這邊](https://jupyterbook.org/en/stable/publish/netlify.html)**
