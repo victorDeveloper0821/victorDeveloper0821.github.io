@@ -11,6 +11,9 @@ description='這邊是Victor 的技術天地，在這裡我會分享軟體工程
 theme = 'anatole'
 enableRobotsTXT = true
 defaultContentLanguage='zh'
+fullPostContent = true
+hasCJKLanguage=true
+summaryLength=100
 [sitemap]
   changefreq = "monthly"
   priority = 0.5
@@ -20,6 +23,7 @@ defaultContentLanguage='zh'
   series = 'series'
   tag = 'tags'
 [params]
+  readMore = true
   enableMediumZoom=false
   customCss = ["css/custom.css"]
   favicon = 'favicons/'
@@ -99,10 +103,11 @@ defaultContentLanguage='zh'
     languageCode = 'zh-TW'     
     languageDirection = 'ltr'     
     languageName = '繁體中文'     
-    weight = 1    
+    weight = 1
+    summaryLength=150
     [languages.zh.params]
       Title='蔡仔為 Victor Tsai'
-      description='在軟體業打滾中的 Java 工程師，在冰冷的 code 中記錄生活的溫暖'
+      description='這邊是Victor 的技術天地，在這裡我會分享軟體工程師工作的點滴'
      [[languages.zh.menu.main]]
       name="首頁"
       url = "/"
@@ -129,7 +134,8 @@ defaultContentLanguage='zh'
     languageCode = 'en-US'     
     languageDirection = 'ltr'     
     languageName = 'English' 
-    weight = 2     
+    weight = 2   
+    summaryLength=70  
     [languages.en.params]       
       Title = 'Victor Tsai'
       description = 'Interest: Java, Backend Engineering'
