@@ -5,7 +5,7 @@ Description: "本篇教學主要提供 jupyter notebook 如何發佈於網站上
 Tags: ['Data Analysis', 'Python', 'Resume']
 Categories: ['Job', 'Tech']
 DisableComments: false
-thumbnail: '/images/jupyter-logo.png'
+thumbnail: '/images/posts/jupyter-logo.png'
 ---
 
 ## 前情提要：

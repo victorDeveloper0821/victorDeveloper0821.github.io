@@ -57,7 +57,9 @@
         {{ end }}
         <!-- add read more -->
         {{- if and (.Truncated) (.Site.Params.readMore) -}}
-          <a href="{{ .RelPermalink }}">{{ i18n "read_more" }}</a>
+          <a href="{{ .RelPermalink }}">{{ i18n "read_more" }}
+            <i class="fa fa-forward" aria-hidden="true"></i>
+          </a>
         {{- end -}}
       </div>
 

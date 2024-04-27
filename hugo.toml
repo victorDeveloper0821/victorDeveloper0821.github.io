@@ -13,7 +13,6 @@ enableRobotsTXT = true
 defaultContentLanguage='zh'
 fullPostContent = true
 hasCJKLanguage=true
-summaryLength=100
 [sitemap]
   changefreq = "monthly"
   priority = 0.5

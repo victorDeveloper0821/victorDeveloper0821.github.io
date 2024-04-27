@@ -7,6 +7,7 @@ Categories: ['Devops']
 DisableComments: false
 toc: true
 draft: false
+thumbnail: '/images/posts/docker-logo.png'
 ---
 ## Key Concept of Docker
 

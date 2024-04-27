@@ -6,6 +6,7 @@ Tags: ['spring boot','API Doc', 'Swagger']
 Categories: ['spring boot', 'backend']
 DisableComments: false
 draft: false
+thumbnail: '/images/posts/swagger-logo.jpeg'
 ---
 
 ## 為什麼要用到 API 文檔？
