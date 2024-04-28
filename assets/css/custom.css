@@ -43,4 +43,50 @@ table {
     margin-right: 10px;
   }
 
-  
+  /* Table Of Content CSS */
+
+  #toc {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    width: 250px;
+}
+
+#toc h3 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#TableOfContents ul {
+    list-style: none;
+    padding: 0;
+}
+
+#TableOfContents li {
+    margin-bottom: 5px;
+}
+
+#TableOfContents a {
+    color: #0645AD;
+    text-decoration: none;
+    display: block;
+    padding: 2px 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#TableOfContents a:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+#TableOfContents ul ul {
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+#TableOfContents ul ul a {
+    font-size: 0.9em;
+}
