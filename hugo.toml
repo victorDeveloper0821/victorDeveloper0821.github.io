@@ -105,6 +105,7 @@ hasCJKLanguage=true
     weight = 1
     summaryLength=150
     [languages.zh.params]
+      author='蔡仔為 Victor Tsai'
       Title='蔡仔為 Victor Tsai'
       description='這邊是Victor 的技術天地，在這裡我會分享軟體工程師工作的點滴'
      [[languages.zh.menu.main]]
