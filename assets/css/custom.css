@@ -54,6 +54,28 @@ table {
     width: 250px;
 }
 
+/* For tablets or medium screens */
+@media (max-width: 768px) {
+  #toc {
+      width: 200px; /* Smaller width for medium screens */
+      right: 10px; /* Less margin on the right */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  #toc {
+      width: 100%; /* Full width for small screens */
+      right: 0; /* No margin on the right */
+      top: 0; /* Position at the top */
+      margin: 0; /* No margin */
+      height: auto; /* Auto-adjust height */
+      z-index: 1000; /* Ensure it's on top of other content */
+      background-color: rgba(249, 249, 249, 0.9); /* Slightly transparent */
+      border-bottom: 1px solid #ccc; /* Border at the bottom only */
+  }
+}
+
 #toc h3 {
     color: #333;
     text-align: center;

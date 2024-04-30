@@ -133,3 +133,4 @@ chapters:
 
 ## 資料來源：
  - [Jupyter book 官網](https://jupyterbook.org/en/stable/intro.html)
+ - [我的 github 程式範例](https://github.com/victorDeveloper0821/handon-py-data-analysis)
