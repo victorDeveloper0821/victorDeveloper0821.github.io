@@ -7,7 +7,6 @@ Tags: ['職涯成長']
 Categories: ['工作心態','求職']
 series: ['工程師碎碎念']
 DisableComments: false
-draft: true
 ---
 
 ## 介紹：

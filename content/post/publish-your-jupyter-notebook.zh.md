@@ -2,7 +2,7 @@
 title: "發布你的 Jupyter Notebook 更方便分享數據分析的 insight"
 date: 2024-04-24T11:06:01+08:00
 Description: "本篇教學主要提供 jupyter notebook 如何發佈於網站上，使得數據分析專案可以讓面試官更方便了解你的能力。"
-Tags: ['Data Analysis', 'Python', 'Resume']
+Tags: ['jupyter notebook','Data Analysis', 'Python', 'Resume']
 Categories: ['Job', 'Tech']
 DisableComments: false
 toc: true
