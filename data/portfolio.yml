@@ -2,6 +2,22 @@ portfolioitems:
   # portfolio category
   - title: Side Projects
     portfolioitem:
+      - name: Cloud function crawler
+        link: https://github.com/victorDeveloper0821/crawler-cloud-function
+        status: 'Done'
+        description: 'Combine with google schedular to fetch opendata regularly'
+        tags:
+          - GCP
+          - Python
+      - name: YouBike - Shared Bike Service - Data Analysis and Data Visualization 
+        image: '/images/portfolio/bikePred.png'
+        link: https://ubikeanalytics.netlify.app/intro
+        description: 'Predicting the vacancy at each bike station based on time periods and locations.'
+        status: 'On Going'
+        tags:
+          - Data Analytics
+          - Machine Learning
+          - Data Visualization
       - name: Spring boot templates
         image: '/images/portfolio/springboot.png'
         link: https://github.com/victorDeveloper0821/Spring-boot-template
@@ -15,21 +31,6 @@ portfolioitems:
         end: ''
         authors:
           - Victor
-      - name: Cloud function crawler
-        link: https://github.com/victorDeveloper0821/crawler-cloud-function
-        status: 'On Going'
-        description: 'Combine with google schedular to fetch opendata regularly'
-        tags:
-          - GCP
-          - Python
-      - name: Sharing Bike Prediction
-        image: '/images/portfolio/bikePred.png'
-        link: https://gohugo.io/
-        description: 'Predicting the vacancy at each bike station based on time periods and locations.'
-        status: 'On Going'
-        tags:
-          - Data Analytics
-          - Machine Learning
   # portfolio category
   - title: Research
     portfolioitem:
