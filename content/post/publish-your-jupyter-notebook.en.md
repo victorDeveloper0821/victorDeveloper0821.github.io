@@ -24,60 +24,62 @@ After the interview, I summarized some bullet points to strengthen my resume.
 
 In next section, I will introduce how to use jupyter notebook to present your work on portofolio. 
 
-## 為什麼使用 Jupyter notebook：
-選擇使用 jupyter notebook 作為數據分析專案的展示有以下幾種原因：
-- Jupyter Notebook 可以發布於網頁，非技術背景的 HR 或是 PM 都可以看懂
-- Jupyter Notebook 除了可以撰寫 markdown 格式文件，同時又支援 Python、R語言的程式碼區塊；更直觀展現自己的 coding skills 
-- GitHub Repository 只有程式碼，這樣面試官很難快速了解面試者的程度
+## Why Use Jupyter Notebook:
 
-## 如何開始建立 Jupyter Notebook 專案?
+Choosing Jupyter Notebook for a data analysis project presentation has several advantages:
+- Jupyter Notebook can be published on the web, making it understandable to HR or PMs without a technical background.
+- Besides supporting markdown documents, Jupyter Notebook also supports Python and R code blocks, showcasing coding skills more intuitively.
+- GitHub repositories only contain code, making it difficult for interviewers to quickly assess a candidate's proficiency.
 
-**Prequests:**
-- 安裝 Anaconda 或是 mini-conda (aka. 縮小版 Anaconda)，在指令列可以用 `conda` 指令 
+## How to Start a Jupyter Notebook Project:
 
-打開命令列輸入以下指令，安裝 Jupyter notebook 及相關套件於環境:
+**Pre-requisites:**
+- Install Anaconda or Miniconda (a lightweight version of Anaconda). Use the `conda` command in the command line.
 
-1. 更新 Conda 套件
-```
-conda update conda
-```
+Open the command line and enter the following commands to install Jupyter Notebook and related packages in your environment:
 
-2. 建立虛擬環境 virtualEnv: 
-```
-conda create -n yourenvname python=${your python ver.}
-```
+1. Update Conda packages
+   ```
+   conda update conda
+   ```
 
-3. 開啟已安裝的虛擬環境：
-```
-conda activate yourenvname
-```
+2. Create a virtual environment:
+   ```
+   conda create -n yourenvname python=${your python ver.}
+   ```
 
-4. 於虛擬環境執行以下套件: 
-```
-conda install -c conda-forge jupyter-book jupyter
-```
+3. Activate the virtual environment:
+   ```
+   conda activate yourenvname
+   ```
 
-## 建立 Jupyter notebook 方法：
-**Jupyter notebook 是什麼？**
-- 可互動式網頁介面，可以直接在筆記本上執行、編寫 Python 程式碼
-- 由 IPython(互動式 Python 片段執行) + Notebook 整合形成
+4. Install the necessary packages in the virtual environment:
+   ```
+   conda install -c conda-forge jupyter-book jupyter
+   ```
 
-以下開始敘述如何建立這樣的專案：
+## Creating a Jupyter Notebook Project:
 
-1. 直接從以前的 Jupyter notebook 專案新增檔案
+**What is Jupyter Notebook?**
+- An interactive web interface where you can write and execute Python code directly within the notebook.
+- It combines IPython (interactive Python execution) and Notebook.
 
-**需要新增下列檔案：**
-- 基本的 jupyter notebook 設定資訊 (`_config.yml`)
-- 設定 table of Content 於 jupyter notebook (`_toc.yml`)
+Here's how to create such a project:
+
+1. Add files to an existing Jupyter Notebook project
+
+**Files to add:**
+- Basic Jupyter Notebook configuration information (`_config.yml`)
+- Table of Content settings for Jupyter Notebook (`_toc.yml`)
 ---
-2. 利用 Jupyter book 指令建立新專案
-安裝完環境後可以使用 `jupyter-book` 指令建立 template 
-```
-jupyter-book create your_folder/
-```
+2. Use Jupyter Book commands to create a new project
+   After setting up the environment, use the `jupyter-book` command to create a template:
+   ```
+   jupyter-book create your_folder/
+   ```
 
-### 建立 jupyter notebook 專案後，其資料夾架構如下：
-P.S. 可直接使用 tree 指令查看樹狀架構
+### After creating the Jupyter Notebook project, the folder structure is as follows:
+P.S. You can use the tree command to view the structure.
 ```
 $ tree your_folder
 your_folder/
@@ -91,9 +93,9 @@ your_folder/
 ├── references.bib
 └── requirements.txt
 ```
-其中要包含 requirements.txt 以利於部署程式時安裝其相依套件
+Make sure to include `requirements.txt` for installing dependencies during deployment.
 
-### _config.yml 簡易設定：
+### Simple _config.yml settings:
 ```
 # In _config.yml
 title: My sample book
@@ -102,17 +104,17 @@ logo: logo.png
 execute:
   execute_notebooks: force
 
-# Add a bibtex file so that we can create citations
+# Add a bibtex file for citations
 bibtex_bibfiles:
   - references.bib
 ```
-**三個主要的設定**
-- title: 你的 Jupyter notebook 標題 (可自訂)
-- author: 作者名稱(可自訂)
-- logo: 你的圖片 logo 名稱
-**詳細可以參考[這邊](https://jupyterbook.org/en/stable/customize/config.html)**
+**Three main settings:**
+- title: Your Jupyter Notebook title (customizable)
+- author: Author name (customizable)
+- logo: Your logo image name
+**For more details, refer to [here](https://jupyterbook.org/en/stable/customize/config.html)**
 
-### _toc.yml 簡易設定:
+### Simple _toc.yml settings:
 ```
 # In _toc.yml
 format: jb-book
@@ -122,21 +124,22 @@ chapters:
 - file: notebooks
 - file: markdown-notebooks
 ```
-**主要設定檔**
-- format: 顯示 jupyterbook 的樣式(`jb-article`, or `jb-book`)
-- root: 你的 jupyter notebook 首頁
-- chapters: 該章節可以在 yml 新增多個檔名，每個檔名代表一個 chapter (章節)
+**Main settings:**
+- format: Jupyter Book display style (`jb-article` or `jb-book`)
+- root: The homepage of your Jupyter Notebook
+- chapters: Add multiple filenames as chapters in the yml file, each representing a chapter.
 
-## 發布你的 Jupyter Notebook 到網頁上：
-目前官方網站建議使用 netlify 作為部署的主要 solution，這個 Section 中介紹概略的流程如何部署完成
+## Publishing Your Jupyter Notebook on the Web:
 
-**相關步驟如下：**
-- 註冊帳戶(建議使用 github 建立)
-- 與 github 中要部署的專案連結，連結後會有 Authorization 視窗，直接點選“是”即可
-- 於部署設定要設定 `build command` 與 `Publish directory` 的選項，這樣網頁才能部署成功。
-![Netlify設定](/images/netlify-jpyter.png)
-**官網中更詳細的設定[點這邊](https://jupyterbook.org/en/stable/publish/netlify.html)**
+Currently, the official website recommends using Netlify as the main solution for deployment. This section outlines the general process for completing the deployment.
 
-## 資料來源：
- - [Jupyter book 官網](https://jupyterbook.org/en/stable/intro.html)
- - [我的 github 程式範例](https://github.com/victorDeveloper0821/handon-py-data-analysis)
+**Steps:**
+- Register an account (it's recommended to use GitHub)
+- Link the project you want to deploy from GitHub. After linking, an authorization window will appear, simply click "Yes."
+- Set the `build command` and `Publish directory` options in the deployment settings to ensure successful deployment.
+![Netlify settings](/images/netlify-jpyter.png)
+**For more detailed settings, check [here](https://jupyterbook.org/en/stable/publish/netlify.html)**
+
+## Sources:
+- [Jupyter Book Official Website](https://jupyterbook.org/en/stable/intro.html)
+- [My GitHub Code Examples](https://github.com/victorDeveloper0821/handon-py-data-analysis)
